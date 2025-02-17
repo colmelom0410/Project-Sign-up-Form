@@ -39,3 +39,82 @@
   #root, #__next {
     isolation: isolate;
   }
+
+/* ------------------------ */
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+.sideSection>img{
+  width: 100%;
+}
+
+.sideSection{
+    display: flex;
+    height: 100%;
+    flex:1;
+    position: relative;
+    z-index: -1;
+}
+.odinContainer{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+}
+.icon{
+  color: white;
+  font-size: 4rem;
+}
+.icon img{
+  height: 1.5em;
+}
+
+.sideSection .footer{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  display: flex;  
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    background-color: #f9fafb;
+}
+
+.formRow{
+  margin-top: 1.5em;
+  display: flex;
+  border: 1px solid red;
+  justify-content: flex-start;
+  gap: 5em;
+}
+.formRow .rowSection{
+  border: 1px solid green;
+  width: 250px;
+}
+.formRow input[type='text'], .formRow input[type="email"], .formRow input[type="tel"], .formRow input[type="password"]{
+  width: 100%;
+  height: initial;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+}
+.mainText{
+  padding: 50px;
+}
+
+.signUpForm{
+  background-color: #ffffff;
+  padding: 5px 50px 40px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 -1px 12px rgba(44, 44, 44, 0.1)
+}
