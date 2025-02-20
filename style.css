@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "norsebold";
+  src:
+    url("fonts/Norse-Bold.woff2") format("woff2"),
+    url("fonts/Norse-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -45,7 +54,7 @@
 body{
     display: flex;
     height: 900px;
-    /* border: 2px dashed orange; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .sideSection>img{
@@ -59,7 +68,6 @@ body{
     flex:1;
     position: relative;
     z-index: -1;
-    /* border: 1px solid red; */
 }
 .odinContainer{
   background-color: rgba(0, 0, 0, 0.5);
@@ -70,6 +78,7 @@ body{
   justify-content: center;
   align-items: center;
   top: 20%;
+  font-family: "norsebold";
 }
 .icon{
   color: white;
@@ -91,31 +100,26 @@ body{
 .main{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     flex: 2;
     background-color: #f9fafb;
-    /* border: 2px dashed purple; */
     height: 100%;
 }
 
 .formRow{
   margin-top: 1.5em;
   display: flex;
-  /* border: 1px solid red; */
   justify-content: flex-start;
   gap: 5em;
 }
 .formRow .rowSection{
-  /* border: 1px solid green; */
   width: 250px;
 }
-.formRow input[type='text'], .formRow input[type="email"], .formRow input[type="tel"], .formRow input[type="password"]{
-  width: 100%;
-  height: initial;
-  border: 1px solid #E5E7EB;
-  border-radius: 4px;
-}
+
 .mainText{
-  padding: 50px;
+  margin: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .mainHead{
   background-color: #ffffff;
@@ -139,4 +143,44 @@ footer p{
 footer p>a{
   color: #596D48;
   text-decoration: none;
+  font-weight: bold;
+}
+
+h2, label{
+  font-weight: bold;
+  color: rgb(44, 44, 44);
+}
+label{
+  font-size: 0.8rem;
+}
+
+.formRow input[type='text'], .formRow input[type="email"], .formRow input[type="tel"], .formRow input[type="password"]{
+  width: 100%;
+  height: initial;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+}
+
+
+/* Focus */
+.formRow input[type='text']:focus,
+.formRow input[type="email"]:focus,
+.formRow input[type="tel"]:focus,
+.formRow input[type="password"]:focus {
+  border-color: rgb(13, 108, 250);
+  outline: none;
+  box-shadow: 0 0 4px rgb(13, 108, 250);
+}
+input:invalid {
+  border-color: initial;  /* or you can just leave it unset, which is the default */
+}
+
+/* Validation */
+.formRow input[type='text']:invalid,
+.formRow input[type="email"]:invalid,
+.formRow input[type="tel"]:invalid,
+.formRow input[type="password"]:invalid{
+  border-color: red;
+  outline: none;
+  box-shadow: 0 0 4px red;
 }
