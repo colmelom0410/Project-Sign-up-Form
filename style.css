@@ -53,8 +53,8 @@
 
 body{
     display: flex;
-    height: 900px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
 }
 
 .sideSection>img{
@@ -64,7 +64,7 @@ body{
 
 .sideSection{
     display: flex;
-    height: 100%;
+    min-height: 900px;
     flex:1;
     position: relative;
     z-index: -1;
@@ -103,7 +103,7 @@ body{
     justify-content: center;
     flex: 2;
     background-color: #f9fafb;
-    height: 100%;
+    min-height: 900px;
 }
 
 .formRow{
@@ -175,10 +175,11 @@ input:invalid {
   border-color: initial;  /* or you can just leave it unset, which is the default */
 }
 
+
 /* Validation */
-.formRow input[type='text']:invalid,
-.formRow input[type="email"]:invalid,
-.formRow input[type="tel"]:invalid,
+.formRow input[type='text']:invalid:focus,
+.formRow input[type="email"]:invalid:focus,
+.formRow input[type="tel"]:invalid:focus,
 .formRow input[type="password"]:invalid{
   border-color: red;
   outline: none;
