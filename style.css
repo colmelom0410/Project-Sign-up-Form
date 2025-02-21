@@ -139,6 +139,12 @@ button{
 footer p{
   margin: 0px 50px;
 }
+a{
+  color: inherit;
+}
+a:active{
+  color: rgb(0, 255, 136);
+}
 
 footer p>a{
   color: #596D48;
